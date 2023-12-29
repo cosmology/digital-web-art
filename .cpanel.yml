@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/digitalw/public_html/
-    - /bin/cp /frontend/dist/robot_avatar.png $DEPLOYPATH
+    - export REPOPATH=/home/digitalw/repositories/digital-web-art/frontend/dist/
+    - /bin/cp $REPOPATH $DEPLOYPATH
