@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/digitalw/public_html/
-    # - /bin/cp -R frontend/dist/assets/* $DEPLOYPATH/assets/
-    - /bin/cp -R frontend/dist/* $DEPLOYPATH
+    # - /bin/cp -R dist/* $DEPLOYPATH/assets/
+    - /bin/cp frontend/dist/index.html $DEPLOYPATH
