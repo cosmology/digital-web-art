@@ -8,7 +8,7 @@ const email = 'ivanprokic@gmail.com';
 
 const repository = 'https://github.com/cosmology';
 
-const linkedIn = 'https://www.linkedin.com/in/ivan-prokic-537b563/';
+const linkedIn = 'https://www.linkedin.com/in/ivan-prokic/';
 
 const resumePDF = 'http://localhost:5173/IvanProkicCV.pdf';
 
