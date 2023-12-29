@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/digitalw/public_html/
     - export REPOPATH=/home/digitalw/repositories/digital-web-art/frontend/dist/
-    - /bin/cp $REPOPATH $DEPLOYPATH
+    - /bin/cp -r $REPOPATH $DEPLOYPATH
