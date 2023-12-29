@@ -1,0 +1,343 @@
+@use 'theme.scss';
+
+.app {
+  border-top: 2px solid var(--primary);
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+
+  a {
+    color: var(--link-primary);
+  }
+  & .table-operations {
+    margin-bottom: 16px;
+  }
+  & .table-operations > button {
+    margin-right: 8px;
+  }
+  & .footer-links {
+    color: var(--primary);
+  }
+  & .table-row-even {
+    background-color: var(--bg-secondary);
+  }
+  & .table-row-odd {
+    background-color: var(--bg-primary);
+  }
+  .dot {
+    /*margin: 15px 5px 0 0;*/
+    height: 16px;
+    width: 16px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* SEARCH ***********************************/
+
+  /*******************************************************
+   ANTD OVERRIDES.
+  ********************************************************/
+
+  .ant-tabs-ink-bar {
+    background-color: var(--primary) !important;
+  }
+
+  /*.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu > .ant-menu-submenu-selected  {
+    border-bottom: 2px solid var(--primary) !important;
+  }*/
+
+  .ant-menu-item:hover,
+  .ant-menu-submenu-title:hover {
+    color: var(--primary) !important;
+  }
+
+  & :global(.has-error) {
+    color: var(--error-color);
+  }
+
+  & .primary-btn {
+    background-color: var(--primary) !important;
+    border: none;
+    color: var(--text-primary);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*border: solid 1px var(--primary) !important;
+    font-size:  12px;
+    height: 24px;
+    text-transform: uppercase;
+    font-weight: bold;*/
+  }
+
+  /* MENU ***********************************/
+
+  .ant-menu-item .anticon + span,
+  .ant-menu-submenu-title .anticon + span {
+    color: var(--primary);
+  }
+  .ant-menu-vertical .ant-menu-item::after,
+  .ant-menu-vertical-left .ant-menu-item::after,
+  .ant-menu-vertical-right .ant-menu-item::after,
+  .ant-menu-inline .ant-menu-item::after {
+    border-right: 3px solid var(--primary);
+  }
+
+  .ant-menu-horizontal > .ant-menu-item-selected {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+  }
+
+  /* TABLE ***********************************/
+  .ant-table-thead > tr > th {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary);
+  }
+
+  /* BADGE ***********************************/
+
+  .ant-badge-count {
+    background-color: var(--primary);
+  }
+
+  /* ICONS ***********************************/
+
+  .anticon {
+    color: var(--icon-secondary);
+  }
+
+  /* FORM ***********************************/
+
+  & :global(.ant-form) {
+    width: 80%;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 auto;
+    color: var(--dark-grey-6);
+
+    & hr {
+      border: none;
+      margin: 50px 0 25px;
+      height: 1px;
+      color: var(--border-color-base);
+      background-color: var(--border-color-base);
+    }
+  }
+
+  & :global(.ant-form-item) {
+    color: var(--mid-grey-6);
+  }
+
+  & :global(.ant-form .ant-form-item label) {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  & :global(.ant-form-vertical .ant-form-item-label) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  & :global(.ant-form .ant-form-item label) span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  & :global(.ant-form-vertical .ant-form-item) {
+    padding-bottom: 0px;
+    margin-bottom: 18px;
+  }
+  & :global(.ant-form-vertical .ant-form-item-control) {
+    line-height: 1.2;
+  }
+
+  /* CHECKBOXES ***********************************/
+
+  & :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+
+  & :global(.ant-checkbox-indeterminate .ant-checkbox-inner::after) {
+    background-color: var(--primary);
+    color: var(--primary);
+  }
+
+  & :global(.ant-checkbox) {
+    label {
+      font-size: 12px;
+      line-height: 1em;
+    }
+  }
+
+  & :global(.ant-checkbox + span) {
+    font-size: 18px;
+    font-weight: normal;
+    background-color: $primary;
+    color: $primary;
+  }
+
+  & :global(.ant-checkbox + span) p {
+    margin-left: 10px;
+    line-height: 1.5em;
+  }
+
+  & :global(.ant-checkbox-inner) {
+    position: relative;
+    font-size: 3px;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    background-color: var(--light-input-grey-6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  & :global(.ant-checkbox-inner:after) {
+    -webkit-transform: rotate(45deg) scale(0);
+    -ms-transform: rotate(45deg) scale(0);
+    transform: rotate(45deg) scale(0);
+    position: absolute;
+    left: 10.57142857px;
+    top: 4.14285714px;
+    display: table;
+    width: 7.71428571px;
+    height: 16.14285714px;
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+  }
+
+  & :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  & :global(.ant-checkbox-checked .ant-checkbox-inner:after) {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    position: absolute;
+    display: table;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    opacity: 1;
+  }
+
+  /* ALL INPUTS ***********************************/
+
+  & :global(.ant-input) {
+    font-size: 15px;
+    color: var(--primary);
+  }
+
+  & :global(.ant-input-lg) {
+    padding: 6px 11px;
+    margin-bottom: 5px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  & :global(.ant-input-group-addon) {
+    border-radius: 0px;
+  }
+
+  /* ERROR INPUTS ***********************************/
+
+  & :global(.has-error .ant-form-explain) {
+    color: var(--error-color);
+    border-color: var(--error-color);
+    font-size: 13px;
+  }
+
+  & :global(p .has-error) {
+    color: var(--error-color);
+  }
+
+  & :global(.has-error .ant-input) {
+    border-color: var(--error-color);
+    color: var(--error-color);
+  }
+
+  & :global(.has-error .ant-input-group-addon) {
+    color: var(--error-color);
+    border-color: var(--error-color);
+  }
+
+  & :global(.has-error .ant-input-prefix) {
+    color: var(--error-color);
+  }
+
+  /* SELECT BOXES ***********************************/
+
+  & :global(.ant-select-selection) {
+    min-height: 50px;
+    border: solid 1px var(--border-color);
+    background: var(--light-input-grey-6);
+    &:hover {
+      border-color: var(--border-color) !important;
+    }
+  }
+
+  & :global(.has-error .ant-select-selection) {
+    border-color: var(--error-color);
+  }
+
+  & :global(.ant-select-lg .ant-select-selection__rendered) {
+    line-height: 50px;
+  }
+
+  /* TOOLTIPS ***********************************/
+
+  & :global(.ant-tooltip-inner) {
+    padding: 16px;
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    background-color: var(--info-color);
+    border-radius: 0;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    min-height: 32px;
+    word-break: normal;
+  }
+  .info-tooltip {
+    padding: 0 !important;
+    border: none;
+    margin-left: 10px;
+    /*background: transparent;*/
+    color: var(--icon-primary); /*rgba(0, 0, 0, 0.65);*/
+    transition: none;
+    font-weight: 400;
+    &:hover,
+    &:focus {
+      /*background: transparent;*/
+      color: var(--border-blue-6); /*rgba(0, 0, 0, 0.65);*/
+    }
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &:after {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/**
+ * There is a huge advantage in this approach in combingin css vars with
+ * pre processor since antd uses less and changing var on the fly results
+ + in all component tree re-render. We can use the less approach that antd uses
+ */
+@import "../colors";
+@import "css-vars";
+
+$css-vars-use-native: true;
+
+$primary: $nordstrom;
+$linkPrimary: $haloGreen;
+$iconPrimary: $icons;
+$backgroundPrimary: $bleach;
+$backgroundSecondary: $sand;
+$textPrimary: $bleach;
+$textSecondary: $slateGrey;
+$textAlternate: $darkGrey;
+
+@include css-vars(
+  (
+    --primary: $primary,
+    --link-primary: $linkPrimary,
+    --icon-primary: $iconPrimary,
+    --bg-primary: $backgroundPrimary,
+    --bg-secondary: $backgroundSecondary,
+    --text-primary: $textPrimary,
+    --text-secondary: $textSecondary,
+    --text-alternate: $textAlternate,
+  )
+);

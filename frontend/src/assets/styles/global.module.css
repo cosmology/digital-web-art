@@ -1,0 +1,262 @@
+.name {
+  font-family: 'Lobster', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  line-height: 1.5715;
+  font-size: 14px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  /* background-color: brown; */
+  background-color: var(--bgc-0);
+  font-size: 1.2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /* transition: background-color 200ms linear, color 200ms linear,
+    fill 200ms linear, border 200ms linear; */
+}
+
+a {
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+button {
+  all: unset;
+}
+
+h1 {
+  all: unset;
+}
+
+.hero:hover {
+  z-index: 3 !important;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.icon-hover > * {
+  transition: transform 0.3s ease, filter 0.25s ease-in-out;
+  -webkit-transition: transform 0.3s ease, filter 0.25s ease-in-out;
+}
+
+.icon-hover:hover > *,
+.icon-hover:focus > * {
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(30, 30, 30, 0.7));
+  filter: drop-shadow(1px 1px 1px rgba(30, 30, 30, 0.7));
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.scroll-active .menu-sidebar {
+  border-bottom: solid;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-radius: 0px !important;
+  transition: none !important;
+  border-color: var(--fc-0) !important;
+}
+
+.menu-sidebar:focus-visible,
+.menu-sidebar:hover {
+  background-color: var(--hovbg);
+}
+
+.hovbg:hover,
+.hovbg:focus {
+  background-color: var(--hovbg);
+  border-radius: 10px;
+}
+
+.hover-button {
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu-inline:hover,
+.menu-inline:focus {
+  background-color: var(--hovbg);
+}
+
+.hover-button:hover,
+.hover-button:focus {
+  opacity: 0.8;
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-active .menu-inline {
+  border-bottom: solid;
+  margin-top: 3px;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-radius: 0px !important;
+  transition: none !important;
+}
+
+.skip-link {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.skip-link:focus {
+  background: white;
+  clip: auto;
+  height: auto;
+  left: 0px;
+  padding: 0px;
+  position: fixed;
+  top: 0px;
+  width: auto;
+  z-index: 1001;
+}
+
+@keyframes hero-slide {
+  0% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.prose .anchor:after {
+  color: grey;
+}
+
+pre {
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: #151516;
+  border-radius: 20px !important;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+code {
+  color: var(--code);
+}
+
+.token.parameter {
+  color: lightblue;
+}
+
+.prose code {
+  color: grey;
+}
+
+.prose pre code {
+  border: initial;
+  color: grey;
+}
+
+.prose img {
+  margin: 0px;
+}
+
+.prose > :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: grey;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: grey;
+}
+
+.token.punctuation {
+  color: grey;
+}
+
+.token.maybe-class-name {
+  color: rgb(241, 241, 154);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: lightgreen;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: lavender;
+}
+.token.tag {
+  color: lightskyblue;
+}
+.token.punctuation {
+  color: lightyellow;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: lightyellow;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: lightblue;
+}
+
+.token.function,
+.token.class-name {
+  color: lightpink;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: lightcyan;
+}
