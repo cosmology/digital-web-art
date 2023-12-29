@@ -265,7 +265,7 @@ export const portfolioData: Types.Portfolio = {
       bullets: [
         'Helped Equinix Integration team VDC Inventory service built on SpringBoot and applying Domain Driven Design using Hexagonal ( Port/Adapter ) pattern.',
         'Reverse engineered Virtual Data Center Inventory Capacity Management workflow interfaces from Caplogix and Siebel integrations.',
-        'Maintained 100% Jacoco test coverage in complex distributed transaction enterprise applications, using ArchUnit testing tool for following architecture guidelines, utilizing JUnit5 testing framework, Mockito mocking libraries, WirMock server stubs in Testcontainers.',
+        'Maintained 100% Jacoco test coverage in complex distributed transaction enterprise applications, using ArchUnit testing tool for following architecture guidelines, utilizing JUnit5 testing framework, Mockito mocking libraries, WireMock server stubs in Testcontainers.',
       ],
       dateRange: 'February 2023 - Aug 2023',
       deploymentSrc: '',
