@@ -187,7 +187,7 @@ export const portfolioData: Types.Portfolio = {
     id: 'cosmology',
     jobTitle: 'Senior Software Consultant',
     lastName: 'Prokic',
-    linkedInSrc: 'https://www.linkedin.com/in/ivan-prokic-537b563/',
+    linkedInSrc: 'https://www.linkedin.com/in/ivan-prokic/',
     location: 'San Diego, CA',
     shortAbout: `I love building software with`,
     typeWriterCallToActions: [
