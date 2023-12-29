@@ -9,7 +9,6 @@
     "build": "npm i && npx tsc --incremental && vite build --force",
     "preview": "vite preview",
     "https-preview": "serve dist",
-    "prepare": "husky install",
     "analyze": "ANALYZE=true vite build"
   },
   "dependencies": {
