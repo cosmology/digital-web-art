@@ -5,3 +5,4 @@ deployment:
     - export REPO_BUILD_PATH=/home/digitalw/repositories/digital-web-art/frontend/dist
     - /bin/rm -rf $DEPLOY_PATH/assets
     - /bin/cp -r $REPO_BUILD_PATH/assets* $DEPLOY_PATH/assets
+    - /bin/cp -r $REPO_BUILD_PATH* $DEPLOY_PATH
