@@ -1,4 +1,4 @@
-name: 🚀 Build and Deploys to cPanel
+name: 🚀 Build and Deploy to cPanel
 on:
   workflow_dispatch:
 
@@ -32,4 +32,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./frontend/dist/
+          server-dir: public_html/
           dry-run: true
