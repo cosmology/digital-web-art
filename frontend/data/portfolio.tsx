@@ -226,7 +226,7 @@ export const portfolioData: Types.Portfolio = {
         'Utilized Liquibase changesets for schema definition.',
         'Connected Products subgraph through federation.',
       ],
-      dateRange: 'Dec 2023 - Jan 2024',
+      dateRange: 'Dec 2022 - Jan 2024',
       deploymentSrc: '',
       id: 'equinix',
       m3u8Src: ``,
