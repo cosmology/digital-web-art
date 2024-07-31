@@ -225,7 +225,7 @@ export const portfolioData: Types.Portfolio = {
       bullets: [
         'Built React/Typescript Mateiral UI client application.',
         'Integrated Oauth 2.0 Okta role-based access control (RBAC).',
-        'Applied core architecture principles in developing DGS GraohQL API.',
+        'Applied core architecture principles in developing DGS GraphQL API.',
         'Integrated Spring Security with Spring AI to utilize retreival augmented generation (RAG) on gas emission data, to provide staff members the ability to fine-tune a pre-trained LLM on location-specific data and enable it to provide accurate recommendations.',
       ],
       dateRange: 'Jan 2024 - April 2024',
