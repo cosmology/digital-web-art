@@ -6,11 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 import manifest from './manifest.json';
 
 // https://vitejs.dev/config/
-export default defineConfig(({mode}) => {
-
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-
-  console.log(env);
 
   return {
     plugins: [
@@ -46,12 +43,11 @@ export default defineConfig(({mode}) => {
     //     },
     //   },
     // },
-  
+
     server: {
-      port: env.PORT, // default ext: 5173
+      port: Number(env.PORT), // default ext: 5173
       // to expose to external network
       host: true,
     },
-  }
-  
+  };
 });
