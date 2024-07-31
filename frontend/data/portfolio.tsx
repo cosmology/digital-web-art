@@ -26,6 +26,7 @@ export const portfolioData: Types.Portfolio = {
       position: 'Lead Software Engineer',
       src: '',
       svgs: [
+        'react',
         'springboot',
         'hibernate',
         'liquibase',
@@ -82,7 +83,7 @@ export const portfolioData: Types.Portfolio = {
       company: 'TV Page',
       dateRange: 'Apr 2019 – Oct 2019',
       description:
-        'Designed developed and integrated Ambassador / Merchant platform consolidation into reusable, agnostic, tested, localized, theme-able “plug & play” use of exteranlly build  Design System package with Storybook support for stakeholder customization.',
+        'Designed developed and integrated Ambassador / Merchant platform consolidation into reusable, agnostic, tested, localized, theme-able “plug & play” use of externally built Design System package with Storybook support for stakeholder customization.',
       id: 'tvpage',
       imgSrc: `https://${myDomain}/images/tvpage.png`,
       location: 'San Diego CA',
@@ -107,7 +108,7 @@ export const portfolioData: Types.Portfolio = {
       company: 'Canary Health',
       dateRange: 'Jan 2017 – Apr 2019',
       description:
-        'Build client onboarding system with multi language support for Canadian and Mexico expansion markets and provided new feature integration and support for workshops and mentoring programs in company “Better Choices Better Health” app.',
+        'Build a client onboarding system with multi language support for Canadian and Mexico expansion markets and provided new feature integration and support for workshops and mentoring programs in company “Better Choices Better Health” app.',
       id: 'canary',
       imgSrc: `https://${myDomain}/images/canary.png`,
       location: 'Los Angles CA',
@@ -132,7 +133,7 @@ export const portfolioData: Types.Portfolio = {
       company: 'Tehnicom Solutions',
       dateRange: 'Nov 2016 - Dec 2017',
       description:
-        'Integrated React based gambling experince utilizing "Bet Construct" GraphQL-like API and led a team from conceptualization through project management and development to final deployment in agressive 8 month timeline.',
+        'Integrated React based gambling experience utilizing "Bet Construct" GraphQL-like API and led a team from conceptualization through project management and development to final deployment in aggressive 8 month timeline.',
       id: 'tehnicom',
       imgSrc: `https://${myDomain}/images/tehnicom.jpeg`,
       location: 'Belgrade Serbia',
@@ -158,7 +159,7 @@ export const portfolioData: Types.Portfolio = {
       company: 'Bluehornet',
       dateRange: 'Oct 2012 - Oct 2016',
       description:
-        'Moved to back-end roles adding features in segmentaton, DKIM signing and numerous email marketing API. Led front end efforts in architecting and delivering custom Form Builder application with Hybrid Validation System, using single schema for validating user input on both front and back ends.',
+        'Moved to back-end roles adding features in segmentation, DKIM signing and numerous email marketing API. Led front end efforts in architecting and delivering custom Form Builder application with Hybrid Validation System, using single schema for validating user input on both front and back ends.',
       id: 'bluehornet',
       imgSrc: `https://${myDomain}/images/bluehornet.jpeg`,
       location: 'San Diego CA',
@@ -218,8 +219,28 @@ export const portfolioData: Types.Portfolio = {
   projects: [
     {
       type: 'work',
+      position: 'Consultant',
+      location: 'San Diego, CA',
+      imgSrc: 'https://digitalwebart.net/images/isos.jpg',
+      bullets: [
+        'Built React/Typescript Mateiral UI client application.',
+        'Integrated Oauth 2.0 Okta role-based access control (RBAC).',
+        'Applied core architecture principles in developing DGS GraohQL API.',
+        'Integrated Spring Security with Spring AI to utilize retreival augmented generation (RAG) on gas emission data, to provide staff members the ability to fine-tune a pre-trained LLM on location-specific data and enable it to provide accurate recommendations.',
+      ],
+      dateRange: 'Jan 2024 - April 2024',
+      deploymentSrc: '',
+      id: 'isos',
+      m3u8Src: ``,
+      name: 'Isos Group ',
+      repos: [],
+      subHeading: 'Provided system design, architecture and development of the most sustainability-related dashboards on the market to allow enterprise-level utility management, bill pay systems site-level operations and corporate sustainability managers to review data and use aggregates for public greenhouse gas emissions reporting.',
+      svgs: ['springboot'],
+    },
+    {
+      type: 'work',
       position: 'Lead Software Engineer - Backend',
-      location: 'San Deigo, CA',
+      location: 'San Diego, CA',
       imgSrc: 'https://digitalwebart.net/images/equinix.png',
       bullets: [
         'Applied Domain Driven Design using Hexagonal ( Port/Adapter ) pattern.',
@@ -238,7 +259,7 @@ export const portfolioData: Types.Portfolio = {
     {
       type: 'work',
       position: 'Lead Software Engineer - Backend',
-      location: 'San Deigo, CA',
+      location: 'San Diego, CA',
       imgSrc: 'https://digitalwebart.net/images/equinix.png',
       bullets: [
         'Dockerized VDC Request Center GraphQL API service resulted from initial (2.1G) into (380MB) production image.',
@@ -258,7 +279,7 @@ export const portfolioData: Types.Portfolio = {
     {
       type: 'work',
       position: 'Lead Software Engineer - Backend',
-      location: 'San Deigo, CA',
+      location: 'San Diego, CA',
       imgSrc: 'https://digitalwebart.net/images/equinix.png',
       subHeading:
         'Leading Akluvis team backend efforts, providing mentorship in various backend technologies to ingreated Domain Driven Design using Port/Adapter pattern and defining Equinix core business inventory model and 100% test coverage.',
@@ -278,7 +299,7 @@ export const portfolioData: Types.Portfolio = {
     {
       type: 'work',
       position: 'Pleasure',
-      location: 'San Deigo, CA',
+      location: 'San Diego, CA',
       imgSrc: 'https://digitalwebart.net/images/dwa-white.png',
       bullets: [],
       dateRange: 'Oct 2022',
@@ -298,8 +319,8 @@ export const portfolioData: Types.Portfolio = {
       imgSrc: 'https://digitalwebart.net/images/undp.png',
       bullets: [
         'Customized existing React web app',
-        'Build a service that listens on NATS stream server incoming events through Redis caching for storing incoming long-url requests and saving hashed tiny-url in MongoDB collection.',
-        'Build mongoDB aggregators for reporting for analytics purposes.',
+        'Built a service that listens on NATS stream server incoming events through Redis caching for storing incoming long-url requests and saving hashed tiny-url in MongoDB collection.',
+        'Built mongoDB aggregates for reporting for analytics purposes.',
       ],
       dateRange: 'Apr 2022 - Sept 2022',
       deploymentSrc: 'https://undp.com',
@@ -353,7 +374,7 @@ export const portfolioData: Types.Portfolio = {
       imgSrc: `https://${myDomain}/images/zego.png`,
       location: 'San Diego, CA',
       bullets: [
-        'Build service is the T in our ETL (Extraction Transformation Loading) pipeline and is a part of our Information Import and Integration stack services It listens to a kafka queue and performs on-the-fly transformation of various client data formats into Zego json file format.',
+        'Built a service is the T in our ETL (Extraction Transformation Loading) pipeline and is a part of our Information Import and Integration stack services It listens to a kafka queue and performs on-the-fly transformation of various client data formats into Zego json file format.',
         'Managed Deposits refactor to Apollo Federation.',
         'Plaid integration to Apollo Federation.',
         'CI CD Harness Concourse Kubernetes Cluster, Docker Swarm.',
@@ -364,7 +385,7 @@ export const portfolioData: Types.Portfolio = {
       m3u8Src: '',
 
       repos: [],
-      subHeading: `Worked on company ETL transformation services utilizing Kafka for orchestaring new client onboarding, helped with Plaid integration banking and support, new feature intergration in Zego react and react native app and CI/CD pipelines migration to AWS cloud`,
+      subHeading: `Worked on company ETL transformation services utilizing Kafka for orchestrating new client onboarding, helped with Plaid integration banking and support, new feature intergration in Zego react and react native app and CI/CD pipelines migration to AWS cloud`,
       svgs: [
         'amazonaws',
         'css3',
@@ -389,7 +410,7 @@ export const portfolioData: Types.Portfolio = {
       location: 'San Diego, CA',
       imgSrc: `https://${myDomain}/images/tvpage.png`,
       bullets: [
-        'Build Design System for project reuse',
+        'Built a Design System for project reuse',
         'Implemented themeing and internatinalization',
         'Provided mentorship of newly implemented stack',
         'Helped with CI CD using Cirlce CI and Terraform',
@@ -423,7 +444,7 @@ export const portfolioData: Types.Portfolio = {
       name: 'Canary Health',
       repos: [],
       subHeading:
-        'Build client onboarding system with multi language support for Canadian and Mexico expansion markets and provided new feature integration and support for workshops and mentoring programs in company “Better Choices Better Health” app.',
+        'Built client onboarding system with multi language support for Canadian and Mexico expansion markets and provided new feature integration and support for workshops and mentoring programs in company “Better Choices Better Health” app.',
       svgs: ['appollo', 'antd', 'git', 'github', 'graphql', 'react', 'redux', 'ruby'],
     },
     {
@@ -477,7 +498,7 @@ export const portfolioData: Types.Portfolio = {
       name: 'Skinit',
       repos: [],
       subHeading:
-        'Maintained and provided feature implementation in Customizer application. Helped with Facebook, Photobucket, Flickr, Picasa APIs intergations. Worked on 3D prototype project enabling Customizer mapping awaiting 3D printers maturity. Migrated old code to revamped V4. Got shut down by Steve Jobs.',
+        'Maintained and provided feature implementation in Customizer application. Helped with Facebook, Photobucket, Flickr, Picasa APIs integrations. Worked on 3D prototype project enabling Customizer mapping awaiting 3D printers maturity. Migrated old code to revamped V4. Got shut down by Steve Jobs.',
       svgs: [],
     },
   ],
