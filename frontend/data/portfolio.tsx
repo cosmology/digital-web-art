@@ -240,10 +240,10 @@ export const portfolioData: Types.Portfolio = {
       location: 'San Diego, CA',
       imgSrc: 'https://digitalwebart.net/images/isos.jpg',
       bullets: [
-        'Built React/Typescript Mateiral UI client application.',
+        'Built a React/Typescript/Material UI client application.',
         'Integrated Oauth 2.0 Okta role-based access control (RBAC).',
         'Applied core architecture principles in developing DGS GraphQL API.',
-        'Integrated Spring Security with Spring AI to utilize retreival augmented generation (RAG) on gas emission data, to provide staff members the ability to fine-tune a pre-trained LLM on location-specific data and enable it to provide accurate recommendations.',
+        'Integrated Spring Security with Spring AI to utilize retrieval augmented generation (RAG) on greenhouse gas emissions data, to provide staff members the ability to fine-tune a pre-trained LLM on location-specific data and enable it to provide accurate recommendations.',
       ],
       dateRange: 'Jan 2024 - April 2024',
       deploymentSrc: '',
@@ -251,7 +251,8 @@ export const portfolioData: Types.Portfolio = {
       m3u8Src: ``,
       name: 'Isos Group ',
       repos: [],
-      subHeading: 'Provided system design, architecture and development of the most sustainability-related dashboards on the market to allow enterprise-level utility management, bill pay systems site-level operations and corporate sustainability managers to review data and use aggregates for public greenhouse gas emissions reporting.',
+      subHeading:
+        'Provided system design, architecture and development of sustainability-related dashboards to allow enterprise-level utility management, bill pay systems site-level operations and corporate sustainability managers to review data and use aggregates for public greenhouse gas emissions reporting for ISOS clients.',
       svgs: ['springboot'],
     },
     {

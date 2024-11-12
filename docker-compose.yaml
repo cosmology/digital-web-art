@@ -6,15 +6,14 @@ networks:
 services:
   web:
     container_name: web
-    build: 
+    build:
       context: ./frontend
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
-    - PORT
-    - VITE_PORT
+      - PORT
     ports:
-      - "${PORT}:${PORT}"
+      - '${PORT}:${PORT}'
     volumes:
       - .:/app
       - /app/node_modules
