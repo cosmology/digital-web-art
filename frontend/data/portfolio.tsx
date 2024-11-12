@@ -219,12 +219,10 @@ export const portfolioData: Types.Portfolio = {
   projects: [
     {
       type: 'work',
-      position: 'Consultant',
+      position: 'Certified Developer – Associate',
       location: 'San Diego, CA',
       imgSrc: 'https://digitalwebart.net/images/aws-certified-developer-associate.png',
-      bullets: [
-        'Got certified Nov 8th 2024.',
-      ],
+      bullets: ['Got certified Nov 8th 2024.'],
       dateRange: 'July 2024 - Nov 2024',
       deploymentSrc: '',
       id: 'aws',

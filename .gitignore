@@ -26,3 +26,7 @@ dist-ssr
 
 # misc
 .env
+.env.*
+
+frontend/tsconfig.tsbuildinfo
+frontend/tsconfig.tsbuildinfo

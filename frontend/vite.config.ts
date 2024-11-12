@@ -7,7 +7,19 @@ import manifest from './manifest.json';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
+  const ENV_PREFIX = 'REACT_APP_'; // using the REACT_APP_ convention
+
+  const envVars = loadEnv(mode, process.cwd(), [ENV_PREFIX]);
+
+  const processEnvVarsForDefine = {
+    ...Object.keys(envVars).reduce((acc, curr) => {
+      // requires stringify
+      // process.env.<variable> will be replaced in the code
+      // envVars are set to the "define" property in the config below
+      acc[`process.env.${curr}`] = JSON.stringify(envVars[curr]);
+      return acc;
+    }, {} as Record<string, string>),
+  };
 
   return {
     plugins: [
@@ -45,7 +57,8 @@ export default defineConfig(({ mode }) => {
     // },
 
     server: {
-      port: Number(env.PORT), // default ext: 5173
+      port: Number(envVars.REACT_APP_PORT), // default ext: 5173
+      define: processEnvVarsForDefine,
       // to expose to external network
       host: true,
     },
