@@ -4,18 +4,12 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { useRecoilState } from 'recoil';
 
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import SportsHockeyIcon from '@mui/icons-material/SportsHockey';
 import WorkIcon from '@mui/icons-material/Work';
 import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import Collapse from '@mui/material/Collapse';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import green from '@mui/material/colors/green';

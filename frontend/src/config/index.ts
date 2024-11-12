@@ -10,6 +10,8 @@ const repository = 'https://github.com/cosmology';
 
 const linkedIn = 'https://www.linkedin.com/in/ivan-prokic/';
 
+const awsCert = 'https://www.credly.com/badges/13e20180-669e-4ed5-a9d3-a40c7b43b7b9/public_url';
+
 const resumePDF = 'http://localhost:5173/IvanProkicCV.pdf';
 
 const messages = {
@@ -57,6 +59,7 @@ const defaultMetaTags = {
 const giphy404 = 'https://giphy.com/gifs/iranserver-iran-server-bluebot-blue-bot-aYpmlCXgX9dc09dbpl';
 
 export {
+  awsCert,
   loader,
   notifications,
   dateFormat,

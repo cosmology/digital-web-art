@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 
+import CertificationBadge from '../../components/CertificationBadge';
 import DefaultIcon from '@mui/icons-material/Deblur';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -11,6 +12,12 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+
+import Badge from '@mui/material/Badge';
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
+import CheckIcon from '@mui/icons-material/Check';
+import IconButton from '@mui/material/IconButton';
 
 import { Const } from '@/const';
 import routes from '@/routes';
@@ -85,7 +92,18 @@ function Sidebar() {
       swipeAreaWidth={30}
     >
       <Profile />
-      <List sx={{ width: 250, pt: (theme) => `${theme.mixins.toolbar.minHeight}px` }}>
+      <div
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          display: 'flex',
+          paddingTop: "20px"
+        }}
+      >
+        
+        <CertificationBadge />
+      </div>
+      <List sx={{ width: 250, pt: (theme) => `${theme.mixins.toolbar.minHeight / 2}px` }}>
         {Object.values(routes)
           .filter((route) => route.title)
           .map(({ path, title, icon: Icon }, i) => (

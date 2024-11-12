@@ -5,7 +5,7 @@ import { usePortfolio } from '@/hooks/usePortfolioContext';
 import { Const } from '../../const';
 
 export const Profile = () => {
-  const picW = Const.drawerWidth - Const.pad * 5.1;
+  const picW = Const.drawerWidth - Const.pad * 8.1;
   const { person } = usePortfolio();
   const fullName = person.firstName + ' ' + person.lastName;
 

@@ -1,0 +1,12 @@
+.dockerignore
+node_modules
+npm_debug.log
+Dockerfile
+.git
+.gitignore
+.npmrc
+.env*
+.gitlab-*
+.github
+.dist
+*.md

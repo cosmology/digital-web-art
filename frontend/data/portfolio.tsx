@@ -4,13 +4,13 @@ export const cdnDomain = 'd1jdqfkicm13py.cloudfront.net';
 export const myDomain = 'digitalwebart.net';
 
 export const portfolioData: Types.Portfolio = {
-  // leave empty, the contents of of this are injected
+  // leave empty, the contents of this are injected
   blogs: [],
   devMessage: 'Hello, I see you are checking out the dev tools.',
   domain: 'https://www.digitalwebart.net',
   githubProjectName: '',
   heroM3u8Src: '',
-  // leave empty, the contents of of this are injected
+  // leave empty, the contents of this are injected
   icons: [],
   id: 'portfolio',
   jobs: [
@@ -217,6 +217,23 @@ export const portfolioData: Types.Portfolio = {
     ],
   },
   projects: [
+    {
+      type: 'work',
+      position: 'Consultant',
+      location: 'San Diego, CA',
+      imgSrc: 'https://digitalwebart.net/images/aws-certified-developer-associate.png',
+      bullets: [
+        'Got certified Nov 8th 2024.',
+      ],
+      dateRange: 'July 2024 - Nov 2024',
+      deploymentSrc: '',
+      id: 'aws',
+      m3u8Src: ``,
+      name: 'AWS',
+      repos: [],
+      subHeading: 'Worked on my AWS Dev Assoc Certification DEV02',
+      svgs: ['aws'],
+    },
     {
       type: 'work',
       position: 'Consultant',
