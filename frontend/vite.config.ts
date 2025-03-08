@@ -6,11 +6,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 import manifest from './manifest.json';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const ENV_PREFIX = 'REACT_APP_'; // using the REACT_APP_ convention
+export default defineConfig(({ command, mode }) => {
 
-  const envVars = loadEnv(mode, process.cwd(), [ENV_PREFIX]);
-
+  const envVars = loadEnv(mode, process.cwd(), '');
   const processEnvVarsForDefine = {
     ...Object.keys(envVars).reduce((acc, curr) => {
       // requires stringify
@@ -57,7 +55,7 @@ export default defineConfig(({ mode }) => {
     // },
 
     server: {
-      port: Number(envVars.REACT_APP_PORT), // default ext: 5173
+      port: Number(process.env.PORT), // default ext: 5173
       define: processEnvVarsForDefine,
       // to expose to external network
       host: true,
