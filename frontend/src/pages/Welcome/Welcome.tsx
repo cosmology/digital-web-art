@@ -1,5 +1,4 @@
 import Typography from '@mui/material/Typography';
-import { style } from '@mui/system';
 
 import { motion, useScroll } from 'framer-motion';
 
@@ -7,7 +6,6 @@ import { Content } from '@/components/Content';
 import Meta from '@/components/Meta';
 import TypeWriterText from '@/components/TypeWriterText';
 import { Const } from '@/const';
-import useOrientation from '@/hooks/useOrientation';
 import { usePortfolio } from '@/hooks/usePortfolioContext';
 
 import WelcomeHeaders from './WelcomeHeaders';
@@ -38,13 +36,6 @@ function Welcome() {
         }}
       />
       <Content>
-        {/* <p
-          style={{
-            margin: 0,
-          }}
-        >
-          Hello I am
-        </p> */}
         <Typography variant="h1">{`Hi I'm ${portfolio.person.firstName}`}</Typography>
         <TypeWriterText
           prefix={portfolio.person.shortAbout}

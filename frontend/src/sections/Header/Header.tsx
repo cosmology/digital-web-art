@@ -18,16 +18,14 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { motion, useScroll, useVelocity } from 'framer-motion';
 
 import ContactMeSpeedDial from '@/components/ContactMeSpeedDial';
-import BackToTop from '@/components/ScrollToTop';
+import { PopupWidget } from "react-calendly";
 import { FlexBox } from '@/components/styled';
-import { Const } from '@/const';
 import useHotKeysDialog from '@/store/hotkeys';
 import useNotifications from '@/store/notifications';
 import useSidebar from '@/store/sidebar';
 import useTheme from '@/store/theme';
 import { themeModeState } from '@/store/theme';
 
-import { HotKeysButton } from './styled';
 import { getRandomJoke } from './utils';
 
 interface Props {
@@ -93,27 +91,15 @@ function Header() {
               {title}
             </Button> */}
             </FlexBox>
-            <FlexBox>
-              {/* <FlexBox>
-              <Tooltip title="Hot keys" arrow>
-                <HotKeysButton
-                  size="small"
-                  color="primary"
-                  aria-label="open hotkeys dialog"
-                  onClick={hotKeysDialogActions.open}
-                >
-                  alt + /
-                </HotKeysButton>
-              </Tooltip>
+            <FlexBox sx={{ alignItems: 'left' }}>
             </FlexBox>
-
-            <Divider orientation="vertical" flexItem /> */}
+            <FlexBox>
 
               <ContactMeSpeedDial />
-              <Divider orientation="vertical" flexItem />
+             
               <Tooltip disableInteractive title="Switch theme" arrow>
                 <IconButton
-                  sx={{ height: 'fit-content', alignSelf: 'center' }}
+                  sx={{ height: 'fit-content', alignSelf: 'center', marginRight: '35px' }}
                   color="primary"
                   size="large"
                   edge="end"
@@ -122,6 +108,15 @@ function Header() {
                   {currentTheme === 'light' ? <Moon /> : <Sun />}
                 </IconButton>
               </Tooltip>
+              {/* <Divider orientation="vertical" flexItem sx={{ marginRight: '30px' }} /> */}
+              <PopupWidget
+                        url="https://calendly.com/ivanprokic"
+                        rootElement={document.getElementById("root")}
+                        text="&#9743;"
+                        textColor="#8FC9F9"
+                        color="#001F3F"
+                      />
+              
             </FlexBox>
           </Toolbar>
         </AppBar>
