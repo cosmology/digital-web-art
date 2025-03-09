@@ -9,7 +9,6 @@ import { SkillCloud } from '@/components/Clouds/SkillCloud';
 import { Content } from '@/components/Content';
 import StackContent from '@/components/LoremIpsum';
 import Meta from '@/components/Meta';
-import { IvanSvgScroll } from '@/components/Svgs';
 import { Const } from '@/const';
 
 function Stack() {
