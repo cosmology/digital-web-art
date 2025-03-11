@@ -16,7 +16,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+      - name: 📦 Install PNPM
+        run: npm i -g pnpm
 
       - name: 🔧 Enable Corepack and Install pnpm
         run: |
