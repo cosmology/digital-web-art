@@ -5,14 +5,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.14.0]
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: 🏗️ Setup Node.js and Enable Corepack
+      - name: 🏗️ Setup Node.js ${{ matrix.node-version }} and Enable Corepack
         uses: actions/setup-node@v4
         with:
-          node-version-file: .nvmrc
+          node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
 
       - name: 🔧 Enable Corepack and Install pnpm
