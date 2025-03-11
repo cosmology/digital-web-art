@@ -9,24 +9,20 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 10
-          run_install: false
-
-      - name: 🔨 Build Project
+      - name: 🏗️ Setup Node.js and Corepack
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: 'pnpm'
 
-      - name: Install dependencies
+      - name: 🔧 Enable Corepack and Install Dependencies
         run: |
-          pnpm i
+          corepack enable
+          pnpm --version # Check the installed version
+          pnpm install
           pnpm build
 
-      - name: Save build artifact
+      - name: 💾 Save build artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -40,4 +36,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./frontend/dist/
           server-dir: public_html/
-          # dry-run: true
