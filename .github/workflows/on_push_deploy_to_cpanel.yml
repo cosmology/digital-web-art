@@ -19,7 +19,8 @@ jobs:
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
-          pnpm --version # Verify pnpm is installed
+          export PATH="$(pwd)/.local/bin:$PATH" # Ensure pnpm is in PATH
+          pnpm --version # Verify installation
 
       - name: 📦 Install dependencies and Build
         run: |
