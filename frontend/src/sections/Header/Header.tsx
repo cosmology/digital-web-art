@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { PopupWidget } from 'react-calendly';
 import { useRecoilState } from 'recoil';
 
 import Moon from '@mui/icons-material/DarkMode';
@@ -18,7 +19,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { motion, useScroll, useVelocity } from 'framer-motion';
 
 import ContactMeSpeedDial from '@/components/ContactMeSpeedDial';
-import { PopupWidget } from "react-calendly";
 import { FlexBox } from '@/components/styled';
 import useHotKeysDialog from '@/store/hotkeys';
 import useNotifications from '@/store/notifications';
@@ -91,12 +91,10 @@ function Header() {
               {title}
             </Button> */}
             </FlexBox>
-            <FlexBox sx={{ alignItems: 'left' }}>
-            </FlexBox>
+            <FlexBox sx={{ alignItems: 'left' }}></FlexBox>
             <FlexBox>
-
               <ContactMeSpeedDial />
-             
+
               <Tooltip disableInteractive title="Switch theme" arrow>
                 <IconButton
                   sx={{ height: 'fit-content', alignSelf: 'center', marginRight: '35px' }}
@@ -110,13 +108,12 @@ function Header() {
               </Tooltip>
               {/* <Divider orientation="vertical" flexItem sx={{ marginRight: '30px' }} /> */}
               <PopupWidget
-                        url="https://calendly.com/ivanprokic"
-                        rootElement={document.getElementById("root")}
-                        text="&#9743;"
-                        textColor="#8FC9F9"
-                        color="#001F3F"
-                      />
-              
+                url="https://calendly.com/ivanprokic"
+                rootElement={document.getElementById('root')!}
+                text="&#9743;"
+                textColor="#8FC9F9"
+                color="#001F3F"
+              />
             </FlexBox>
           </Toolbar>
         </AppBar>
