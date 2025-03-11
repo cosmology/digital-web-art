@@ -9,16 +9,20 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: 🏗️ Setup Node.js and Corepack
+      - name: 🏗️ Setup Node.js and Enable Corepack
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: 'pnpm'
 
-      - name: 🔧 Enable Corepack and Install Dependencies
+      - name: 🔧 Enable Corepack and Install pnpm
         run: |
           corepack enable
-          pnpm --version # Check the installed version
+          corepack prepare pnpm@latest --activate
+          pnpm --version # Verify pnpm is installed
+
+      - name: 📦 Install dependencies and Build
+        run: |
           pnpm install
           pnpm build
 
@@ -36,3 +40,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./frontend/dist/
           server-dir: public_html/
+          dry-run: true
